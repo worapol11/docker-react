@@ -1,0 +1,12 @@
+FROM node:alpine
+
+WORKDIR /app
+
+COPY package.json .
+RUN npm install
+RUN npm install -g react-scripts@3.4.0
+COPY . . 
+# RUN npm install -g react-scripts@3.4.0
+
+WORKDIR /app
+CMD ["npm", "run", "start"]
