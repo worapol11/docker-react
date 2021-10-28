@@ -12,4 +12,5 @@ RUN npm run build
 FROM nginx:alpine
 
 WORKDIR /app
+EXPOSE 80
 COPY --from=build /app/build /usr/share/nginx/html
